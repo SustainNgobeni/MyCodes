@@ -9,18 +9,20 @@
 </head>
 <body>
 <h1>Login</h1>
+<div class = "container">
     <form action="login1.php" method="post" >
         
         <label for="email" >Email:</label><br>
-        <input class="X" type="email" id="Email" name="Email" size="50" placeholder="Name@gmail.com" autofocus required><br>
+        <input type="email" id="Email" name="Email" size="50" placeholder="Name@gmail.com" autofocus required><br>
       
         <label for="Password" >Password:</label><br>
-        <input class="X" type="password" id="Password" name="Password" value="" size="50" placeholder="Enter Password" required><br>
+        <input type="password" id="Password" name="Password" value="" size="50" placeholder="Enter Password" required><br>
         
-        <a  href="chan_pass.php">Forgot Password?</a><br>
         <br><button class="button" type="submit">Login</button>
         
       </form> 
       <p>Need to register?<a href="main.php">Sign up</a></p>
+
+    </div>
 </body>
 </html>

@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class Library {
     
-  
      static ArrayList<String> library1Books = new ArrayList<String>();
      static ArrayList<String> library2Books = new ArrayList<String>();
      int x=1;
@@ -45,8 +44,28 @@ public class Library {
      }
  }
 
-     static void returnBook(){
-        System.out.print("Book successfully returned.");
-     }
+ static void returnBook1(String book , int x){
+    for(int p=0; p<library1Books.size();p++){
+      if(book.equals(library1Books.get(p))){
+           Book.canReturnBook(book , library1Books.get(p) );
+           x--;
+      }
+   }
+   if(x == 1){
+      System.out.print("Book cannot be returned");
+   }
+}
+
+static void returnBook2(String book , int x){
+    for(int a=0; a<library2Books.size();a++){
+      if(book.equals(library2Books.get(a))){
+           Book.canReturnBook(book , library1Books.get(a) );
+           x--;
+      }
+   }
+   if(x == 1){
+      System.out.print("Book cannot be returned");
+   }
+}
 
 }

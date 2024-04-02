@@ -1,28 +1,33 @@
 public class Book {
     
     static void bookTitle(){
-        System.out.println("Enter book name:");
+        System.out.print("Enter book name:");
     }
     
+    public static boolean isBookAvailable(String book , String name){
+        if(book.equals(name)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     static void canBorrowBook1(String book, String name){
-        if (book.equals(name)) {
+        if (isBookAvailable(book, name) == true) {
             System.out.println("Book has been successfully borrowed from library 1");
-        } 
-        else if(!book.equals(name)){
-            System.out.println("Book is not available.");
         }
     }
 
     static void canBorrowBook2(String book, String name){
-        if (book.equals(name)) {
+        if (isBookAvailable(book, name) == true) {
             System.out.println("Book has been successfully borrowed from library 2");
         } 
     }
     
     static void canReturnBook(String book, String name){
-        if(book.equals(name)){
+        if(isBookAvailable(book, name) == true){
             System.out.println("Book successfully returned.");
         }
     }
-
 }

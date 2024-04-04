@@ -26,7 +26,7 @@ public class Main {
         Library.library2Books.add("scscbook");
         Library.library2Books.add("sstsbook");
 
-        System.out.println("Welcome to Mountain Caves Library\n");
+        System.out.println("Welcome to Mountain Caves Library(Open from 9AM - 5Pm daily)\n");
         System.out.println("List of the available books in our 2 libraries");
         asterisk();
         Library.printAvailableBooks1();

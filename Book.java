@@ -13,18 +13,12 @@ public class Book {
         }
     }
 
-    static void canBorrowBook1(String book, String name){
+    static void canBorrowBook(String book, String name){
         if (isBookAvailable(book, name) == true) {
-            System.out.println("Book has been successfully borrowed from library 1");
+            System.out.println("Book has been successfully borrowed");
         }
     }
 
-    static void canBorrowBook2(String book, String name){
-        if (isBookAvailable(book, name) == true) {
-            System.out.println("Book has been successfully borrowed from library 2");
-        } 
-    }
-    
     static void canReturnBook(String book, String name){
         if(isBookAvailable(book, name) == true){
             System.out.println("Book successfully returned.");

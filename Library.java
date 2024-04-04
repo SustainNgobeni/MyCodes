@@ -23,7 +23,7 @@ public class Library {
      static void borrowBook1(String book , int x){
       for(int i=0; i<library1Books.size();i++){
         if(book.equals(library1Books.get(i))){
-             Book.canBorrowBook1(book , library1Books.get(i));
+             Book.canBorrowBook(book , library1Books.get(i));
              x--;
         }
      }
@@ -35,7 +35,7 @@ public class Library {
      static void borrowBook2(String book , int x){
       for(int j=0; j<library2Books.size();j++){
              if(book.equals(library2Books.get(j))){
-                Book.canBorrowBook2(book , library2Books.get(j));
+                Book.canBorrowBook(book , library2Books.get(j));
                 x--;
         }
      }

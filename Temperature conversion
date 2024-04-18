@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Converter {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num;
+        double temperature;
+
+        //promts user to choose choice
+        System.out.println("Enter 0 to start the program:");
+        num = input.nextInt();
+        System.out.println("Enter 1 to convert from Celsius:");
+        System.out.println("Enter 2 to convert from Fahrenheit:");
+      
+        
+
+        //while statement to validate input
+        while(num !=3){
+
+        boolean isValidInput = false;
+        while (!isValidInput) {
+            while (!input.hasNextInt()) {
+                System.out.println("Invalid input! Please enter a numeric value.");
+                input.next();
+            }
+            num = input.nextInt();
+            isValidInput = (num == 1 || num == 2); 
+            System.out.println(isValidInput ? "You entered: " + num : "Invalid choice! Please enter 1 or 2.");
+        }
+
+        //prompts user to enter temperature value
+        System.out.println("Enter temperature value in the chosen scale:");
+        temperature = input.nextDouble();
+
+        //
+        double F = 9/5 * temperature + 32;
+        double C = 0.55555555556 * (temperature - 32);
+
+        
+        if(num ==1){
+            System.out.print("conversion from Celsius to Fahrenheit: " + F + " degrees");
+        }
+        else if(num ==2){
+            System.out.print("conversion from Fahrenheit to Celsius: " + C + " degrees");
+        }
+        System.out.println("\n\nEnter 1 to convert from Celsius:");
+        System.out.println("Enter 2 to convert from Fahrenheit:");
+        System.out.println("Enter 3 to exit the program:");
+        num = input.nextInt();
+    }
+    input.close();
+}
+}
+ 

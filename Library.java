@@ -1,26 +1,24 @@
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Library {
+
      //Creates arrayList objects. Also declare and initialize x 
      static ArrayList<String> library1Books = new ArrayList<String>();
      static ArrayList<String> library2Books = new ArrayList<String>();
      int x=1;
 
-     //method that sorts and prints library1Books
+     //method that sorts and printlns library1Books
      public static void printAvailableBooks1(){
         System.out.println("Books available in Library 1:");
         for(int i=0; i<library1Books.size();i++){
-         Collections.sort(library1Books);
             System.out.print( library1Books.get(i) + " ");
         }
      }
 
-     //method that sorts and prints library2Books
+     //method that sorts and printlns library2Books
      public static void printAvailableBooks2(){
       System.out.println("Books available in Library 2:");
-        Collections.sort(library2Books);
-        for(int j=0; j<library1Books.size();j++){
+        for(int j=0; j<library2Books.size();j++){
             System.out.print( library2Books.get(j) + " ");
         }
      }
@@ -34,7 +32,7 @@ public class Library {
         }
      }
      if(x == 1){
-        System.out.print("Book cannot be borrowed");
+        System.out.println("Book not available!!!");
       }
     }
      //method to borrow books from library2
@@ -46,7 +44,7 @@ public class Library {
                }
               }
               if(x == 1){
-              System.out.print("Book cannot be borrowed");
+              System.out.println("Book not available!!!");
                 }
       }
 
@@ -59,7 +57,7 @@ public class Library {
               }
             }
             if(x == 1){
-            System.out.print("Book cannot be returned");
+            System.out.println("Book cannot be returned");
             }
     }
 
@@ -72,7 +70,7 @@ public class Library {
              }
             }
              if(x == 1){
-             System.out.print("Book cannot be returned");
+             System.out.println("Book cannot be returned");
          }
       }
 

@@ -6,20 +6,23 @@ public class Main {
 
         //declare variables
         String name;
-        int num;
+        int num,opt;
         
         //adding books to library1 arraylist
-        Library.library1Books.add("scoabook");
-        Library.library1Books.add("smtabook");
-        Library.library1Books.add("sstabook");
+        Library.library1Books.add("emma");
+        Library.library1Books.add("cut");
+        Library.library1Books.add("macbeth");
 
         //adding books to library2 arraylist
-        Library.library2Books.add("scscbook");
-        Library.library2Books.add("smthbook");
-        Library.library2Books.add("sstsbook");
+        Library.library2Books.add("fallen");
+        Library.library2Books.add("gone");
+        Library.library2Books.add("unwind");
 
-        //Prints available books , welcome message , opening and closing time
+        //Prints welcome message
         System.out.println("Welcome to Mountain Caves Library(Open from 9AM - 5Pm daily)\n");
+        
+        //Prints available books , opening and closing time until user decides to exit program
+       do{
         System.out.println("List of the available books in our 2 libraries");
         asterisk();
         Library.printAvailableBooks1();
@@ -60,14 +63,20 @@ public class Main {
                 Library.returnBook1(name , 1);
                 break;
             case 3:
-                Library.borrowBook1(name , 1);
+                Library.borrowBook2(name , 1);
                 break;
             case 4:
-                Library.returnBook1(name , 1);
+                Library.returnBook2(name , 1);
                 break;    
             default:
-                System.out.println("Wrong number chosen!!!! Try again");    
+                System.out.println("Wrong number chosen!!! Try again");    
         }
+        System.out.println("Press 5 to exit or press a number other than 5 to continue");
+        opt = input.nextInt();
+        
+    }
+        while(opt != 5);
+        input.close();
     }
 
     //method that prints asterisk
